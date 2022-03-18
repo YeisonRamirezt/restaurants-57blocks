@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
  
 app.listen(port, (error) =>{
     if(error) throw err
@@ -9,6 +9,7 @@ app.listen(port, (error) =>{
 
 app.get('/api/restaurants', (req, res) =>{
     res.send('restaurants');
+    console.log('prompted')
 })
 
 
