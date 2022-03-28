@@ -4,7 +4,7 @@ import Admin from "./components/Admin.jsx";
 import { useState } from "react";
 
 function App() {
-  const [intf, setIntf] = useState("admin");
+  const [intf, setIntf] = useState("login");
 
   const changeInterface = (intfs) => {
     setIntf(intfs);
@@ -14,11 +14,11 @@ function App() {
   function swtitchInterface() {
     //intf stands for interface
     if (intf === "registration")
-      return <Registration changeIntf={() => changeInterface("login")} />;
+      return <Registration changeIntf={(e) => changeInterface(e)} />;
     if (intf === "login")
-      return <Login changeIntf={() => changeInterface("registration")} />;
+      return <Login changeIntf={(e) => changeInterface(e)} />;
     if (intf === "admin")
-      return <Admin changeIntf={() => changeInterface("login")} />;
+      return <Admin changeIntf={(e) => changeInterface(e)} />;
   }
 
   return <div>{swtitchInterface()}</div>;

@@ -65,7 +65,7 @@ function Login(props) {
       )
         .then((res) => {
           if (res.status === 200) {
-            setCompleted(true);
+            props.changeIntf('admin');
           } else {
             alert("error");
           }
@@ -129,7 +129,7 @@ function Login(props) {
         </Button>
       </Form>
 
-      <Form.Label className="text-muted text-center" onClick={props.changeIntf}>
+      <Form.Label className="text-muted text-center" onClick={() => props.changeIntf('registration')}>
         don't have and account? Sign up.
       </Form.Label>
     </Container>

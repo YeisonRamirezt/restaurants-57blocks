@@ -70,7 +70,7 @@ function Registration(props) {
       })
         .then((res) => {
           if (res.status === 201) {
-            props.changeIntf();
+            props.changeIntf('login');
           } else {
             throw new Error("form not valid");
           }

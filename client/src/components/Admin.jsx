@@ -9,13 +9,14 @@ class Admin extends Component {
     };
   }
   render() {
+    /* 
     function getProduct(promise) {
       fetch(`restaurants/getproducts?restaurantId=${this.state.products.name}`)
         .then((res) => {
           console.log("response");
         })
         .catch((err) => console.log("Error:", err));
-    }
+    }*/
     return (
       <div className="col-sm-12 col-md-6 col-lg-6 container mt-5">
         <h1 style={{ fontSize: "20px" }} className="m-2 mb-4">
