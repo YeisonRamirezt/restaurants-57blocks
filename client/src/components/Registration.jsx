@@ -157,6 +157,9 @@ function Registration(props) {
           Submit
         </Button>
       </Form>
+      <Form.Label className="text-muted text-center" onClick={() => props.changeIntf('login')}>
+        Login
+      </Form.Label>
     </Container>
   );
 }

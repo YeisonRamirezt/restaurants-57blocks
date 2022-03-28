@@ -1,17 +1,10 @@
-import React, { Component } from "react";
 import Product from "./Products";
-class Admin extends Component {
-  constructor(props) {
-    super(props);
-    // Don't do this!
-    this.state = {
-      products: { productName: "Burger" },
-    };
-  }
-  render() {
+
+function Admin(props) {
+
     /* 
     function getProduct(promise) {
-      fetch(`restaurants/getproducts?restaurantId=${this.state.products.name}`)
+      fetch(`restaurants/getproducts?restaurantId=${state.products.name}`)
         .then((res) => {
           console.log("response");
         })
@@ -20,17 +13,12 @@ class Admin extends Component {
     return (
       <div className="col-sm-12 col-md-6 col-lg-6 container mt-5">
         <h1 style={{ fontSize: "20px" }} className="m-2 mb-4">
-          Hello {this.props.name}!
+          Hello {props.name}!
         </h1>
         <ul className="nav nav-tabs">
-          <li className="nav-item">
-            <a
-              className="nav-link active"
-              aria-current="page"
-              href={this.state.hre}
-            >
-              Collection
-            </a>
+          <li  className="nav-item" onClick={() => props.changeIntf('login')}>
+           
+              Logout
           </li>
         </ul>
 
@@ -49,7 +37,7 @@ class Admin extends Component {
         </table>
       </div>
     );
-  }
+  
 }
 
 export default Admin;

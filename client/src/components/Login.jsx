@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Form, Container, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useFormik } from "formik";
@@ -7,8 +6,6 @@ import "../App.css";
 import "./styles.css";
 
 function Login(props) {
-  const [completed, setCompleted] = useState(false);
-  const [error, setError] = useState(null);
 
   const formik = useFormik({
     initialValues: {
@@ -72,18 +69,10 @@ function Login(props) {
         })
         .catch((err) => {
           console.log(err);
-          setError(true);
         });
     },
   });
 
-  if (completed) {
-    return <h1>Success!</h1>;
-  }
-
-  if (error) {
-    console.log("error", error);
-  }
 
   return (
     <Container fluid className="signup-form">
